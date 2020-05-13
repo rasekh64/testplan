@@ -1,0 +1,46 @@
+file read-case-data setup_17_position_1_speed_60.cas 
+solve iterate 500
+solve set discretization-scheme density 1
+solve set discretization-scheme mom 1
+solve set discretization-scheme k 1
+solve set discretization-scheme omega 1
+solve set discretization-scheme temperature 1
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 5000 no 5000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 10000 no 10000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 50000 no 50000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 100000 no 100000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 150000 no 150000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 200000 no 200000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 250000 no 250000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 300000 no 300000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 350000 no 350000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 400000 no 400000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 450000 no 450000 no 293 no yes no no yes 5 10
+solve iterate 1000
+define boundary-conditions pressure-inlet 18 yes no 500000 no 500000 no 293 no yes no no yes 5 10
+solve iterate 5000
+define boundary-conditions wall 25 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 60 1 0 0 no no 0.00019 no 0.5 no 1
+define boundary-conditions wall 24 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 60 1 0 0 no no 0 no 0.5 no 1
+define boundary-conditions wall 23 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 60 1 0 0 no no 0 no 0.5 no 1
+solve iterate 3000
+solve set pseudo-transient yes yes 1 1 0
+solve iterate 5000
+file write-case-data setup_17_position_1_speed_60.cas 
+OK
+define boundary-conditions wall 25 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 90 1 0 0 no no 0.00019 no 0.5 no 1
+define boundary-conditions wall 24 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 90 1 0 0 no no 0 no 0.5 no 1
+define boundary-conditions wall 23 0 no 0 no no no 0 no yes motion-bc-moving no no no no no 90 1 0 0 no no 0 no 0.5 no 1
+solve iterate 5000
+file write-case-data setup_17_position_1_speed_90.cas 
+exit yes
